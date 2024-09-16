@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var xhr = new XMLHttpRequest();
 
   /* local file url */
-  var url = './health_article.json';
+  var url = './news.json';
 
   /* open a request */
   xhr.open('GET', url, true);
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   xhr.onload = function () {
       if (xhr.status >= 200 && xhr.status < 300) {
           var articles = xhr.response.articles;
-          var articlesDiv = document.getElementById('health_articles');
+          var articlesDiv = document.getElementById('news_articles');
 
           articles.forEach(function(article) {
               var articleDiv = document.createElement('div');
